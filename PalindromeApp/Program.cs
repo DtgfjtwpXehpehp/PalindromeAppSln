@@ -5,8 +5,15 @@
         static void Main(string[] args)
         {
             string userInput = string.Empty;
-            while (userInput != "/exit")
+            string safeWord = "/exit";
+
+            while (userInput != safeWord)
             {
+
+                if (userInput == safeWord)
+                {
+                    break;
+                }
 
             Console.WriteLine("Enter a word that you want to check if it's a palindrome: ");
              userInput = Console.ReadLine();
